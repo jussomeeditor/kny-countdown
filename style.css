@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Doto", sans-serif;
+
+    color: white;
+}
+
+
+.hero {
+    height: 100vh;
+    background-image: url(bg1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.timebox {
+    display: flex;
+    gap: 90px;
+}
+
+.time {
+    text-align: center;
+}
+
+.time h2 {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+label {
+    width: 200px;
+    height: 100px;
+    margin-top: 100px;
+    position: relative;
+    display: block;
+    background-color: #9763a3;
+    border-radius: 80px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    background: #54147a;
+    border-radius: 50%;
+    ;
+    box-shadow: 0px 5px 10pxrgba(0, 0, 0, 0.2);
+}
+
+input:checked+label {
+    background: #050a45;
+}
+
+input:checked+label::after {
+    left: 190px;
+    transform: translateX(-100%);
+    background: #0c1c6a;
+}
+
+label:active:after {
+    width: 80px;
+}
+
+input:checked+label~.hero2 {
+    background-image: url("bg2.png");
+}
+
+
+
+/* CSS */
+.button-89 {
+  --b: 4px;   /* border thickness */
+  --s: 1rem; /* size of the corner */
+  --color: #ffffff;
+  
+  padding: 40px 80px;
+  margin: 50px;
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 33px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
